@@ -71,13 +71,9 @@ fn row_start(n: usize) -> usize {
     (q + r) * (q + 1)
 }
 
-fn row_len(n: usize) -> usize {
-    n / 2 + 1
-}
+fn row_len(n: usize) -> usize { n / 2 + 1 }
 
-fn lookup(row: &[u64], n: usize, k: usize) -> u64 {
-    row[cmp::min(k, n - k)]
-}
+fn lookup(row: &[u64], n: usize, k: usize) -> u64 { row[cmp::min(k, n - k)] }
 
 fn main() {
     let out_dir = env::var_os("OUT_DIR").expect("Failed to get output directory");
